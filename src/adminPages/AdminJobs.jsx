@@ -1,6 +1,6 @@
-import JobCard from "../componemts/JobCard";
+import AdminJobCard from "../componemts/AdminJobCard";
 
-export default function Jobs() {
+export default function AdminJobs() {
   return (
     <div className="w-full p-4">
       <div className="w-full pb-4">
@@ -14,25 +14,19 @@ export default function Jobs() {
       </div>
       <div className="flex w-full justify-center flex-wrap">
         <div className="flex justify-center w-full pb-4 ">
-          <JobCard />
+          <AdminJobCard />
+        </div>
+        <div className="flex justify-center w-full pb-4">
+          <AdminJobCard />
         </div>
         <div className="flex justify-center w-full pb-4 ">
-          <JobCard />
+          <AdminJobCard />
         </div>
         <div className="flex justify-center w-full pb-4 ">
-          <JobCard />
+          <AdminJobCard />
         </div>
         <div className="flex justify-center w-full pb-4 ">
-          <JobCard />
-        </div>
-        <div className="flex justify-center w-full pb-4 ">
-          <JobCard />
-        </div>
-        <div className="flex justify-center w-full pb-4 ">
-          <JobCard />
-        </div>
-        <div className="flex justify-center w-full pb-4 ">
-          <JobCard />
+          <AdminJobCard />
         </div>
       </div>
     </div>

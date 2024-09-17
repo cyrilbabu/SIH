@@ -20,7 +20,7 @@ export default function SideBarItem({
       >
         {title ? (
           <>
-            <span className="pt-1">{icon}</span>
+            <span className="">{icon}</span>
             <p className="px-2 text-xl py-2">{title}</p>
             {request !== 0 && (
               <span className=" text-white bg-red-600 rounded-full w-5 h-5 text-sm  font-semibold text-center ">

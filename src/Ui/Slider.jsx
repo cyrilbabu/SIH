@@ -1,10 +1,11 @@
 import { useState } from "react";
+import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
 
 const Slider = () => {
   const slides = [
-    { url: "https://via.placeholder.com/800x400?text=Slide+1" },
-    { url: "https://via.placeholder.com/800x400?text=Slide+2" },
-    { url: "https://via.placeholder.com/800x400?text=Slide+3" },
+    { url: "/slide2.jpeg" },
+    { url: "/slide1.jpg" },
+    { url: "/slide3.jpg" },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -32,15 +33,15 @@ const Slider = () => {
       </div>
       <button
         onClick={goToPrevious}
-        className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
+        className="absolute top-1/2 left-2 transform -translate-y-1/2 text-white p-2 text-4xl rounded-full"
       >
-        ‹
+        <IoIosArrowDropleft />
       </button>
       <button
         onClick={goToNext}
-        className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
+        className="absolute top-1/2 right-2 transform -translate-y-1/2 text-white p-2 text-4xl rounded-full"
       >
-        ›
+        <IoIosArrowDropright />
       </button>
       <div className="flex justify-center mt-2">
         {slides.map((_, index) => (

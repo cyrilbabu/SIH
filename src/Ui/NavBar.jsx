@@ -30,7 +30,7 @@ export default function Navbar({ show = false }) {
       </div>
       {show ? (
         <button
-          className="text-xl font-bold bg-green-700 rounded py-2 px-4"
+          className="text-xl font-bold bg-green-700 rounded border py-1 px-3"
           onClick={() => navigate("/user/login")}
         >
           Login

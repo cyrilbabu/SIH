@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaHome, FaSearch } from "react-icons/fa";
 import SideBarItem from "./SideBarItem";
-import { IoIosLogOut, IoMdSettings } from "react-icons/io";
+import { IoIosLogOut, IoMdAdd, IoMdSettings } from "react-icons/io";
 import { PiCertificateFill } from "react-icons/pi";
 
 export default function AdminSideBar() {
@@ -71,10 +71,24 @@ export default function AdminSideBar() {
         </div>
         <div
           onClick={() => {
-            setItemSelected("applications");
+            setItemSelected("postJobs");
             // setSideBar(false);
           }}
           style={getItemStyle(0.2)}
+        >
+          <SideBarItem
+            icon={<IoMdAdd />}
+            title="Post Jobs"
+            link="admin/jobs/post"
+            itemSelected={itemSelected === "posJjobs"}
+          />
+        </div>
+        <div
+          onClick={() => {
+            setItemSelected("applications");
+            // setSideBar(false);
+          }}
+          style={getItemStyle(0.3)}
         >
           <SideBarItem
             icon={<PiCertificateFill />}
@@ -88,7 +102,7 @@ export default function AdminSideBar() {
             setItemSelected("settings");
             // setSideBar(false);
           }}
-          style={getItemStyle(0.3)}
+          style={getItemStyle(0.4)}
         >
           <SideBarItem
             icon={<IoMdSettings />}
@@ -101,7 +115,7 @@ export default function AdminSideBar() {
           onClick={() => {
             navigate("/");
           }}
-          style={getItemStyle(0.4)}
+          style={getItemStyle(0.5)}
         >
           <SideBarItem icon={<IoIosLogOut />} title="Logout" />
         </div>

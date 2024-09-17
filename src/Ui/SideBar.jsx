@@ -4,6 +4,7 @@ import { FaHome, FaSearch } from "react-icons/fa";
 import SideBarItem from "./SideBarItem";
 import { IoIosLogOut, IoMdSettings } from "react-icons/io";
 import { PiCertificateFill } from "react-icons/pi";
+import { CgProfile } from "react-icons/cg";
 
 export default function SideBar() {
   const [itemSelected, setItemSelected] = useState(
@@ -95,6 +96,20 @@ export default function SideBar() {
             title="Settings"
             link="user/settings"
             itemSelected={itemSelected === "settings"}
+          />
+        </div>
+        <div
+          onClick={() => {
+            setItemSelected("profile");
+            // setSideBar(false);
+          }}
+          style={getItemStyle(0.3)}
+        >
+          <SideBarItem
+            icon={<CgProfile />}
+            title="Profile"
+            link="user/profile"
+            itemSelected={itemSelected === "profile"}
           />
         </div>
         <div

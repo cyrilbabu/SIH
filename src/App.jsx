@@ -14,6 +14,10 @@ import Home from "./pages/Home";
 import Applications from "./pages/Applications";
 import Jobs from "./pages/Jobs";
 import Settings from "./pages/settings";
+import Profile from "./pages/Profile";
+import AdminJobs from "./adminPages/AdminJobs";
+import PostJob from "./adminPages/PostJob";
+import AdminAppLayout from "./Ui/AdminAppLayout";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -37,12 +41,14 @@ export default function App() {
             <Route path="user/home" element={<Home />} />
             <Route path="user/jobs" element={<Jobs />} />
             <Route path="user/applications" element={<Applications />} />
+            <Route path="user/profile" element={<Profile />} />
             <Route path="user/settings" element={<Settings />} />
           </Route>
 
-          <Route element={<UserAppLayout />}>
+          <Route element={<AdminAppLayout />}>
             <Route path="admin/home" element={<Home />} />
-            <Route path="admin/jobs" element={<Jobs />} />
+            <Route path="admin/jobs" element={<AdminJobs />} />
+            <Route path="admin/jobs/post" element={<PostJob />} />
             <Route path="admin/applications" element={<Applications />} />
             <Route path="admin/settings" element={<Settings />} />
           </Route>
