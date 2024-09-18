@@ -43,7 +43,7 @@ const Slider = () => {
       >
         <IoIosArrowDropright />
       </button>
-      <div className="flex justify-center mt-2">
+      {/* <div className="flex justify-center mt-2">
         {slides.map((_, index) => (
           <div
             key={index}
@@ -53,7 +53,7 @@ const Slider = () => {
             }`}
           ></div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };
