@@ -15,7 +15,7 @@ export default function SideBarItem({
     <Link to={`${link}`}>
       <div
         className={`flex justify-center items-center text-2xl font-bold  mx-2 my-1 rounded-md hover:scale-90 ${
-          itemSelected ? "bg-gray-800 text-white" : "text-blue-600 bg-white"
+          itemSelected ? "bg-gray-800 text-white" : "text-[#8d5322] bg-white"
         } `}
       >
         {title ? (

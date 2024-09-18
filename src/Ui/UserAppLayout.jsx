@@ -2,12 +2,13 @@ import { Outlet } from "react-router-dom";
 
 import SideBar from "./SideBar";
 import Navbar from "./NavBar";
+import ChatBot from "./ChatBot";
 
 export default function UserAppLayout() {
   return (
     <div className="flex flex-col h-screen overflow-hidden">
       <Navbar />
-
+      <ChatBot />
       <div className="flex flex-1 overflow-hidden">
         <div className="hidden  md:flex  md:w-3/12 h-full overflow-y-auto">
           <SideBar />

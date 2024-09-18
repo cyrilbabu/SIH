@@ -32,7 +32,7 @@ export default function SideBar() {
 
   return (
     <div
-      className="bg-blue-600 h-full w-full border-t-2 border-testColor1 pt-1 flex justify-center"
+      className="bg-[#8d5322] h-full w-full border-t-2 border-testColor1 pt-1 flex justify-center"
       style={{
         opacity: isRendered ? 1 : 0,
         transform: isRendered
