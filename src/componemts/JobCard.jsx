@@ -3,7 +3,7 @@ export default function JobCard() {
     <div className="rounded flex overflow-hidden shadow-lg bg-white border w-full border-gray-200">
       <div className="px-4 pb-0 py-4 w-full">
         <div className="font-bold text-xl mb-2">Software Engineer</div>
-        <p className="text-gray-700 text-base">Full-time</p>
+        <p className="text-gray-700 text-base">Job Type: Full-time</p>
         <p className="text-gray-700 text-base">
           Eligibility: Bachelor&apos;s Degree in Computer Science
         </p>
