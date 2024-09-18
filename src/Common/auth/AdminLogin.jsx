@@ -1,7 +1,9 @@
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import "react-toggle/style.css";
 
 export default function AdminLogin() {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -64,6 +66,7 @@ export default function AdminLogin() {
             </div>
 
             <button
+              onClick={() => navigate("/admin/home")}
               type="submit"
               className="w-full bg-blue-600 text-white font-semibold py-2 rounded hover:bg-blue-800 transition duration-300"
             >

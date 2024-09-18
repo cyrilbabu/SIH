@@ -1,4 +1,4 @@
-import { CgProfile } from "react-icons/cg";
+// import { CgProfile } from "react-icons/cg";
 import { FiBriefcase, FiCheckCircle, FiClock } from "react-icons/fi";
 
 export default function AdminHome() {

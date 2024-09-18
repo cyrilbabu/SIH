@@ -7,10 +7,10 @@ export default function FilledApplication() {
         <h1 className="text-4xl font-bold ">Application Filled</h1>
       </div>
       <div className="grid grid-cols-2 gap-2">
-        <UserApplication />
-        <UserApplication />
-        <UserApplication />
-        <UserApplication />
+        <UserApplication admin={true} />
+        <UserApplication admin={true} />
+        <UserApplication admin={true} />
+        <UserApplication admin={true} />
       </div>
     </div>
   );
