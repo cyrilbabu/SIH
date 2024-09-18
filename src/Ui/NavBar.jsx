@@ -21,7 +21,7 @@ export default function Navbar({ show = false }) {
 
   return (
     <div
-      className="flex bg-[#8d5322] text-lg md:text-3xl font-bold text-slate-50 p-3 py-1 w-full justify-between items-center"
+      className="flex bg-blue-600 text-lg md:text-3xl font-bold text-slate-50 p-3 py-1 w-full justify-between items-center"
       style={flashUpStyle}
     >
       <div className="px-4 flex items-center">
