@@ -1,6 +1,8 @@
 import React from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 
-export default function UserApplication() {
+export default function UserApplication({ admin }) {
+  const navigate = useNavigate();
   return (
     <div className="w-full rounded overflow-hidden flex shadow-lg  bg-white border border-gray-200">
       <div className="">
@@ -17,7 +19,12 @@ export default function UserApplication() {
           </p>
         </div>
         <div className="px-6 py-4">
-          <button className="inline-block bg-blue-600 rounded-lg px-4 py-1 text-lg hover:bg-blue-800 font-semibold text-white mr-2">
+          <button
+            onClick={() => {
+              navigate("/admin/seeAllApplication");
+            }}
+            className="inline-block bg-blue-600 rounded-lg px-4 py-1 text-lg hover:bg-blue-800 font-semibold text-white mr-2"
+          >
             View
           </button>
           <button className="inline-block bg-red-600 rounded-lg px-4 py-1 text-lg hover:bg-red-800 font-semibold text-white mr-2">

@@ -1,7 +1,9 @@
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import "react-toggle/style.css";
 
 export default function AdminLogin() {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -10,6 +12,7 @@ export default function AdminLogin() {
 
   const onSubmit = (data) => {
     console.log(data);
+    navigate("/admin/home");
   };
 
   return (
