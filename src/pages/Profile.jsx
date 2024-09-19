@@ -5,8 +5,10 @@ import {
   FaLinkedin,
   FaGithub,
 } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Profile = () => {
+  const navigate = useNavigate();
   return (
     <div className="bg-gray-100 min-h-screen w-full p-6">
       <div className="w-full mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
@@ -15,7 +17,7 @@ const Profile = () => {
           <div className="h-48 bg-gradient-to-r from-blue-600 to-purple-500"></div>
           <div className="absolute -bottom-16 left-8 w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-lg">
             <img
-              src="https://via.placeholder.com/150"
+              src="/profile.jpg"
               alt="Profile"
               className="object-cover w-full h-full"
             />
@@ -32,8 +34,11 @@ const Profile = () => {
               </p>
               <p className="text-gray-500">San Francisco, CA</p>
             </div>
-            <button className="bg-blue-600 text-white px-5 py-2 rounded-lg shadow hover:bg-blue-700 transition duration-300">
-              Connect
+            <button
+              onClick={() => navigate("/user/profile/documents")}
+              className="bg-blue-600 text-white px-5 py-2 rounded-lg shadow font-bold hover:bg-blue-700 transition duration-300"
+            >
+              Documents
             </button>
           </div>
 

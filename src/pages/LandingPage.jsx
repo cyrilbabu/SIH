@@ -9,7 +9,7 @@ export default function LandingPage() {
       <Navbar show={true} />
       <Slider />
 
-      <section className="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 bg-blue-600 py-6 ">
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 bg-blue-200 py-6 ">
         <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow duration-300 transform hover:scale-105">
           <h2 className="text-xl font-semibold text-gray-700 mb-2 flex items-center">
             <FiBriefcase className="mr-2 text-blue-600" /> Total Jobs

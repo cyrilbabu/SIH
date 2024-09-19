@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { FaHome, FaSearch } from "react-icons/fa";
+import { FaBook, FaHome, FaSearch } from "react-icons/fa";
 import SideBarItem from "./SideBarItem";
 import { IoIosLogOut, IoMdSettings } from "react-icons/io";
 import { PiCertificateFill } from "react-icons/pi";
@@ -68,6 +68,20 @@ export default function SideBar() {
             title="Jobs"
             link="user/jobs"
             itemSelected={itemSelected === "jobs"}
+          />
+        </div>
+        <div
+          onClick={() => {
+            setItemSelected("courses");
+            // setSideBar(false);
+          }}
+          style={getItemStyle(0.1)}
+        >
+          <SideBarItem
+            icon={<FaBook />}
+            title="Learning"
+            link="user/courses"
+            itemSelected={itemSelected === "courses"}
           />
         </div>
         <div

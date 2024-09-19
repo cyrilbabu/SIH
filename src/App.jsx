@@ -20,7 +20,12 @@ import PostJob from "./adminPages/PostJob";
 import AdminAppLayout from "./Ui/AdminAppLayout";
 import AdminHome from "./adminPages/AdminHome";
 import FilledApplication from "./adminPages/FilledApplication";
+
 import AllApplication from "./adminPages/AllApplication";
+
+import Courses from "./pages/Courses";
+import JobApplicationForm from "./Ui/JobApplicationForm";
+
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -44,7 +49,12 @@ export default function App() {
             <Route path="user/home" element={<Home />} />
             <Route path="user/jobs" element={<Jobs />} />
             <Route path="user/applications" element={<Applications />} />
+            <Route path="user/courses" element={<Courses />} />
             <Route path="user/profile" element={<Profile />} />
+            <Route
+              path="user/profile/documents"
+              element={<JobApplicationForm />}
+            />
             <Route path="user/settings" element={<Settings />} />
           </Route>
 
