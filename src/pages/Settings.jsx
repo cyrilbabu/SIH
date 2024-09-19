@@ -90,7 +90,7 @@ export default function Settings() {
       {/* Skills Section */}
       <div>
         <h3 className="text-xl font-semibold text-gray-800">Skills</h3>
-        <div className="mt-4 grid grid-cols-2 gap-4">
+        <div className="mt-4  gap-4">
           {skillsFields.map((skill, index) => (
             <div key={skill.id} className="flex items-center">
               <input
@@ -109,7 +109,7 @@ export default function Settings() {
           ))}
           <button
             type="button"
-            className="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg"
+            className="mt-2 bg-blue-600 text-white px-10 py-2 rounded-lg"
             onClick={() => addSkill({ name: "" })}
           >
             Add Skill

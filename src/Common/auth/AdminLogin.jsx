@@ -12,6 +12,7 @@ export default function AdminLogin() {
 
   const onSubmit = (data) => {
     console.log(data);
+    navigate("/admin/home");
   };
 
   return (
