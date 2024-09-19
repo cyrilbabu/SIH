@@ -65,7 +65,7 @@ export default function SideBar() {
         >
           <SideBarItem
             icon={<FaSearch />}
-            title="Jobs"
+            title="Jobs And Internship"
             link="user/jobs"
             itemSelected={itemSelected === "jobs"}
           />

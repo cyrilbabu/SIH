@@ -1,4 +1,8 @@
+import { useNavigate } from "react-router-dom";
+
+/* eslint-disable react/prop-types */
 export default function UserApplication({ admin = false }) {
+  const navigate = useNavigate();
   return (
     <div className="w-full rounded overflow-hidden flex shadow-lg  bg-white border border-gray-200">
       <div className="">
@@ -21,6 +25,12 @@ export default function UserApplication({ admin = false }) {
             </button>
             <button className="inline-block bg-red-600 rounded-lg px-4 py-1 text-lg hover:bg-red-800 font-semibold text-white mr-2">
               Reject
+            </button>
+            <button
+              onClick={() => navigate("/admin/applications/applied")}
+              className="inline-block bg-green-600 rounded-lg px-4 py-1 text-lg hover:bg-blue-800 font-semibold text-white mr-2"
+            >
+              View
             </button>
           </div>
         ) : (

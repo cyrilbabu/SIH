@@ -31,13 +31,13 @@ export default function Navbar({ show = false }) {
       {show ? (
         <div>
           <button
-            className="text-xl font-bold bg-green-700 rounded border py-1 px-3 mr-3"
+            className="text-xl font-bold bg-blue-600 rounded border py-1 px-3 mr-3"
             onClick={() => navigate("/admin/login")}
           >
             Admin
           </button>
           <button
-            className="text-xl font-bold bg-green-700 rounded border py-1 px-3 mr-3"
+            className="text-xl font-bold bg-blue-600 rounded border py-1 px-3 mr-3"
             onClick={() => navigate("/user/login")}
           >
             Login

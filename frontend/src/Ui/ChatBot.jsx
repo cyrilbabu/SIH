@@ -79,10 +79,10 @@ function ChatBot() {
           onClick={() => setIsChatOpen(true)}
           className="flex justify-center items-center h-12 w-12 hover:cursor-pointer"
         >
-          <div className="bg-eyYellow rounded-full p-3 flex justify-center items-center h-full w-full">
+          <div className="bg-blue-600 rounded-full p-3 flex justify-center items-center h-full w-full">
             <FontAwesomeIcon
               icon={faFacebookMessenger}
-              style={{ color: "#747480" }}
+              style={{ color: "#fff" }}
               className="text-3xl"
             />
           </div>
@@ -91,8 +91,8 @@ function ChatBot() {
 
       {/* This is the chat box that will appear when chat is opened */}
       {isChatOpen && (
-        <div className="fixed border border-black bottom-4 right-4 w-96 h-96 bg-white shadow-lg rounded-lg flex flex-col sm:w-full sm:h-full md:w-96 md:h-96">
-          <div className="flex justify-between items-center p-3 bg-eyYellow rounded-t-lg border-b border-black">
+        <div className="fixed border border-black bottom-8 right-8 w-96 h-96 bg-white shadow-lg rounded-lg flex flex-col sm:w-full sm:h-full md:w-[70vh] md:h-[70vh]">
+          <div className="flex justify-between items-center p-3 bg-blue-600 text-white rounded-t-lg border-b border-black">
             <h2 className="text-lg text-pageGray font-bold">Chat</h2>
             <FontAwesomeIcon
               icon={faTimes}
@@ -108,16 +108,16 @@ function ChatBot() {
               <div key={index} className="my-1">
                 <div
                   className={`p-2 rounded-lg max-w-[80%] break-words ${
-                    message.sender === "bot" ? " text-right ml-auto" : "  "
+                    message.sender === "bot" ? " text-right ml-auto " : "  "
                   }`}
                 >
-                  {message.text}
+                  <p className="">{message.text}</p>
                 </div>
               </div>
             ))}
           </div>
           <div
-            className="p-3 border-t flex gap-1 items-center"
+            className="p-3 border-t border-black flex gap-1 rounded-b-lg bg-blue-600 items-center"
             onKeyDown={handleKeyDown}
           >
             <input
@@ -129,8 +129,12 @@ function ChatBot() {
               disabled={isSending}
               ref={inputRef}
             />
-            <button disabled={isSending} onClick={handleSendMessage}>
-              <FontAwesomeIcon icon={faPaperPlane} color="green" />
+            <button
+              disabled={isSending}
+              className="px-4 border py-2 rounded-lg"
+              onClick={handleSendMessage}
+            >
+              <FontAwesomeIcon icon={faPaperPlane} color="white" />
             </button>
           </div>
         </div>

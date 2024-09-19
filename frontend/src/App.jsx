@@ -22,6 +22,7 @@ import AdminHome from "./adminPages/AdminHome";
 import FilledApplication from "./adminPages/FilledApplication";
 import Courses from "./pages/Courses";
 import JobApplicationForm from "./Ui/JobApplicationForm";
+import AppliedUser from "./Ui/ApplyUser";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -34,7 +35,7 @@ const queryClient = new QueryClient({
 export default function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <ReactQueryDevtools initialIsOpen={false} />
+      {/* <ReactQueryDevtools initialIsOpen={false} /> */}
       <BrowserRouter>
         <Routes>
           <Route path="user/login" element={<UserLogin />} />
@@ -59,6 +60,10 @@ export default function App() {
             <Route path="admin/jobs" element={<AdminJobs />} />
             <Route path="admin/jobs/post" element={<PostJob />} />
             <Route path="admin/applications" element={<FilledApplication />} />
+            <Route
+              path="admin/applications/applied"
+              element={<AppliedUser />}
+            />
             <Route path="admin/settings" element={<Settings />} />
           </Route>
 
